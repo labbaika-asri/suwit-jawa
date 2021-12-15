@@ -33,6 +33,9 @@ function acakGambar() {
     }, 100);
 }
 
+let menang = 0;
+let kalah = 0;
+
 const pilihan = document.querySelectorAll("li img");
 pilihan.forEach((e) => {
     e.addEventListener("click", () => {
@@ -41,11 +44,20 @@ pilihan.forEach((e) => {
         const hasil = getHasil(pKomputer, pPlayer);
         const info = document.querySelector(".info");
         const imgKomputer = document.querySelector(".img-komputer");
+        const winScore = document.querySelector(".win-score");
+        const loseScore = document.querySelector(".lose-score");
 
         acakGambar();
 
         setTimeout(() => {
             info.innerHTML = hasil;
+            if (hasil == "MENANG!") {
+                menang++;
+                winScore.innerHTML = menang;
+            } else if (hasil == "KALAH!") {
+                kalah++;
+                loseScore.innerHTML = kalah;
+            }
             imgKomputer.setAttribute("src", `img/${pKomputer}.png`);
         }, 1000);
     });

@@ -180,6 +180,61 @@ h1 {
     border-radius: 40px 40px 0 0;
 }
 
+div.score {
+    position: absolute;
+    background-color: snow;
+    width: 150px;
+    height: 135px;
+    left: 35px;
+    border: 5px solid silver;
+    box-sizing: all;
+    border-radius: 20px;
+}
+
+span.score {
+    font-size: 30px;
+    font-weight: bold;
+    color: mediumvioletred;
+    position: absolute;
+    top: 18px;
+    left: 23px;
+}
+
+span.win,
+span.lose,
+span.win-score,
+span.lose-score {
+    font-size: 25px;
+    position: absolute;
+    top: 60px;
+}
+
+span.win {
+    left: 10px;
+    color: blue;
+}
+
+span.lose {
+    right: 10px;
+    color: red;
+}
+
+span.win-score,
+span.lose-score {
+    color: black;
+    top: 95px;
+    width: 65px;
+    text-align: center;
+}
+
+span.win-score {
+    left: 5px;
+}
+
+span.lose-score {
+    right: 8px;
+}
+
 .area-player {
     width: 560px;
     height: 250px;
